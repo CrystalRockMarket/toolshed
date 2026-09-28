@@ -1,0 +1,1 @@
+An offline guide to 51 self-hosted services: install steps, working docker-compose files, memory and disk costs, and the things that go wrong. No account, no network, no permissions requested.

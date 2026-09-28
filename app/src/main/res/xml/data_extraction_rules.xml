@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Toolshed has nothing worth restoring on a new device: the entire catalogue
+    is compiled into the APK, and the only stored state is a shortlist of
+    service ids plus a machine preference. Those are convenience marks, and
+    re-typing them beats migrating them. Nothing is backed up, transferred to a
+    new device, or included in a cloud backup.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="root" />
+        <exclude domain="file" />
+        <exclude domain="database" />
+        <exclude domain="sharedpref" />
+        <exclude domain="external" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="root" />
+        <exclude domain="file" />
+        <exclude domain="database" />
+        <exclude domain="sharedpref" />
+        <exclude domain="external" />
+    </device-transfer>
+</data-extraction-rules>
