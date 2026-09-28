@@ -196,3 +196,22 @@ space before the `#` was never consumed.
 GPL-3.0-or-later. See [LICENSE](LICENSE).
 
 You are free to inspect it, change it, and run your own copy.
+
+## F-Droid
+
+The build metadata for the submission lives in a fork of
+`gitlab.com/fdroid/fdroiddata`, not in this repository. What belongs here is
+the source plus both copies of the store metadata, because F-Droid reads the
+listing text from Fastlane:
+
+- `fastlane/metadata/android/en-US/` — what F-Droid shows in the client and on
+  the website (`short_description.txt`, `full_description.txt`, changelogs,
+  icon, screenshots)
+- `metadata/android/en-US/` — the same content, for Play-style tooling and for
+  anyone who looks in the conventional place
+
+F-Droid's builder clones this repository anonymously and runs
+`./gradlew assembleRelease`, so the source must be public and the build must
+work with no `local.properties`. Both are verified in CI-style before each
+submission. The APK is intentionally unsigned: F-Droid signs it with its own
+key, so no keystore belongs in this repository.

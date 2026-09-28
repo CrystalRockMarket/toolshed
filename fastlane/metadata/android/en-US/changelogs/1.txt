@@ -1,0 +1,9 @@
+First release.
+
+51 self-hosted services with an installation guide, a working docker-compose
+file, memory and disk estimates, and notes on what goes wrong.
+
+Also included: 5 multi-service starter stacks, and a resource planner that
+totals a shortlist against a Raspberry Pi, a mini PC, a NAS, or a small VPS.
+
+No permissions, no network requests, no account. Everything is bundled.
